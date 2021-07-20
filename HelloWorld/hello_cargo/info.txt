@@ -1,0 +1,26 @@
+To create a Cargo use "cargo new *name of cargo*" and then cd into it
+Calling cargo new makes a new git repo of one already doesn't exist
+
+Within the Cargo.TOML (Tom's Obvious Minimal Language)
+[package] --> Things below this are configuring the package info
+[dependencies] --> start of the section that lists all project dependencies
+
+Packages of code are refered to as crates
+
+Inside src/ the main.rs file resides has hello world by default
+Source files go inside src
+Top level is for README, license, confiug files, and anything else not code related
+
+Building a Cargo
+
+cargi build --> builds the package. Creates executable in target/debug/hello_cargo
+
+./target/debug/hello_cargo --> runs executable
+
+cargo run --> builds and executes. If file has been compiled before it will skip recompile
+
+cargo check --> checks if your code compiles without executing or generating an executable. This is much faster than cargo build.
+
+Typically people use cargo check to test periodically and then cargo build once done implementing
+
+cargo.lock --> keeps track of exact versions of dependencies. SHOULD NEVER MODIFY MANUALLY
